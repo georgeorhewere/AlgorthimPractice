@@ -19,9 +19,30 @@ namespace AlgorthimPractice
         }
 
         //find root 
+        public int getRoot(int item)
+        {
+            //too much work to be done in this array
+            while(item != idArray[item])
+            {
+                item = idArray[item];
+            }
+            return item;
+        }
 
+        //isConnected
+        public bool isConnected(int p, int q)
+        {
+            return getRoot(p) == getRoot(q);
+        }
         ////union
+        public void union(int p, int q)
+        {
+            int idP = getRoot(p);
+            int idQ = getRoot(q);
+            //set the root of p to the root of q
 
+            idArray[idP] = idQ;         
+        }
 
 
     }
