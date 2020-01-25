@@ -10,7 +10,8 @@ namespace AlgorthimPractice
 
             //callQuickFind();
             //callQuickUnion();
-            callWeightedQuickUnion();
+            //callWeightedQuickUnion();
+            callMinimumSequence();
 
         }
 
@@ -64,6 +65,12 @@ namespace AlgorthimPractice
             stub.printArray();
 
 
+        }
+
+        static void callMinimumSequence()
+        {
+            MinimumSequence min = new MinimumSequence();
+            min.getMiniumSequence(2);
         }
 
     }
